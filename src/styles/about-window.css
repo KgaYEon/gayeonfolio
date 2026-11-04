@@ -4,8 +4,8 @@
   top: 50%;
   display: flex;
   flex-direction: column;
-  width: min(100vw - 32px, 1120px, (100vh - 96px - 44px) * 16 / 9);
-  width: min(100vw - 32px, 1120px, (100svh - 96px - 44px) * 16 / 9);
+  width: min(100vw - 32px, 1240px, (100vh - 96px - 44px) * 2);
+  width: min(100vw - 32px, 1240px, (100svh - 96px - 44px) * 2);
   overflow: hidden;
   border: 1.5px solid #4a4a52;
   border-radius: 12px;
@@ -120,7 +120,7 @@ button.about-window__tab { cursor: pointer; }
   outline-offset: -3px;
 }
 
-.about-window__body { aspect-ratio: 16 / 9; }
+.about-window__body { aspect-ratio: 2 / 1; }
 
 .about-window__video {
   display: block;

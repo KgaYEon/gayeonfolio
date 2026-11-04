@@ -1,6 +1,5 @@
 export const HEADLINE_LINES = ["Designed in your", "language"];
 export const LOGO_TEXT = "Gayeonfolio 2026";
-export const SCROLL_HINT = "Scroll";
 
 export const HOME_TAB = "home.html";
 export const ABOUT_TAB = "about_me.mp4";

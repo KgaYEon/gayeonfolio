@@ -1,4 +1,4 @@
-import { LOGO_TEXT, SCROLL_HINT, TYPE_SPEED } from "../data/content.js";
+import { LOGO_TEXT, TYPE_SPEED } from "../data/content.js";
 import { VIEWS, VIEW_ORDER } from "../data/views.js";
 import { createElement } from "../lib/createElement.js";
 import { startTyping } from "../lib/typewriter.js";
@@ -19,7 +19,6 @@ export function Hero() {
       <div class="hero__grid" aria-hidden="true" hidden></div>
       <div class="hero__stage"></div>
       <p class="hero__logo">${LOGO_TEXT}</p>
-      <p class="hero__hint">${SCROLL_HINT}</p>
     </main>
   `);
   const grid = element.querySelector(".hero__grid");
