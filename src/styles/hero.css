@@ -45,7 +45,7 @@
 
 /* 휴대폰 가로: 세로 여백을 줄인다 */
 @media (max-height: 500px) {
-  .hero { padding: 24px 16px 64px; }
-  .hero__stage { font-size: min(9.5vw, 19vh); }
+  .hero { padding: 88px 16px 48px; }
+  .hero__stage { font-size: min(9.5vw, 17vh); }
   .hero__logo { bottom: calc(16px + env(safe-area-inset-bottom)); font-size: 16px; }
 }

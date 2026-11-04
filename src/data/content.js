@@ -1,6 +1,15 @@
 export const HEADLINE_LINES = ["Designed in your", "language"];
 export const LOGO_TEXT = "Gayeonfolio 2026";
 
+// 페이지가 생기면 enabled를 true로 바꾼다
+export const NAV_ITEMS = [
+  { id: "home", label: "home", enabled: true },
+  { id: "about", label: "about me", enabled: true },
+  { id: "process", label: "process", enabled: false },
+  { id: "project", label: "project", enabled: false },
+  { id: "contact", label: "contact", enabled: false },
+];
+
 export const HOME_TAB = "home.html";
 export const ABOUT_TAB = "about_me.mp4";
 export const ABOUT_VIDEO_LABEL = "About me video";

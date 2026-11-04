@@ -1,11 +1,11 @@
 .about-window {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: calc(50% + var(--navbar-offset));
   display: flex;
   flex-direction: column;
-  width: min(100vw - 32px, 1240px, (100vh - 96px - 44px) * 2);
-  width: min(100vw - 32px, 1240px, (100svh - 96px - 44px) * 2);
+  width: min(100vw - 32px, 1240px, (100vh - 160px) * 2);
+  width: min(100vw - 32px, 1240px, (100svh - 160px) * 2);
   overflow: hidden;
   border: 1.5px solid #4a4a52;
   border-radius: 12px;
@@ -166,4 +166,9 @@ button.about-window__tab { cursor: pointer; }
 @keyframes tab-open {
   from { max-width: 0; opacity: 0; }
   to { max-width: 260px; opacity: 1; }
+}
+
+/* 아주 좁은 화면에서는 탭이 잘리지 않도록 점 3개를 숨긴다 */
+@media (max-width: 380px) {
+  .about-window__dots { display: none; }
 }

@@ -2,6 +2,7 @@ import { createElement } from "../lib/createElement.js";
 import { onPageScroll } from "../lib/pageScroll.js";
 import { AboutWindow } from "./AboutWindow.js";
 import { Hero } from "./Hero.js";
+import { Navbar } from "./Navbar.js";
 
 // 각 장면과 머무는 시간(ms). CSS의 애니메이션 시간과 맞춘다.
 const TO_ABOUT = [["collapsing", 560], ["dot", 160], ["opening", 640], ["about", 0]];
@@ -18,11 +19,12 @@ export function App() {
   `);
   const hero = Hero();
   const aboutWindow = AboutWindow({ onClose: () => goTo("home") });
+  const navbar = Navbar({ onSelect: (target) => goTo(target) });
   let page = "home";
   let moving = false;
 
   element.prepend(hero);
-  element.append(aboutWindow.element);
+  element.append(aboutWindow.element, navbar.element);
 
   function setStage(stage) {
     element.dataset.stage = stage;
@@ -44,6 +46,7 @@ export function App() {
   function goTo(target) {
     if (moving || page === target) return;
     page = target;
+    navbar.update({ page });
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setStage(target);
@@ -59,6 +62,7 @@ export function App() {
     onPrevious: () => goTo("home"),
   });
 
+  navbar.update({ page });
   setStage("home");
   return element;
 }

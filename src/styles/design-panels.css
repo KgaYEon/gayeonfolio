@@ -7,7 +7,7 @@
 
 .panel {
   position: absolute;
-  top: 12px;
+  top: 96px;
   width: 184px;
   padding: 14px;
   border: 1px solid var(--color-line);

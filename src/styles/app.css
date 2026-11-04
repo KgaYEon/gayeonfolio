@@ -1,4 +1,6 @@
 .app {
+  /* 상단 메뉴 아래로 창 중심을 내리는 값 */
+  --navbar-offset: 32px;
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
@@ -6,6 +8,11 @@
 }
 
 /* 홈 화면이 한 점으로 줄어든다 */
+.app[data-stage="collapsing"] .hero,
+.app[data-stage="expanding"] .hero {
+  transform-origin: 50% calc(50% + var(--navbar-offset));
+}
+
 .app[data-stage="collapsing"] .hero {
   animation: hero-collapse 0.56s cubic-bezier(0.7, 0, 0.84, 0) both;
 }
@@ -17,7 +24,7 @@
 .app__dot {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: calc(50% + var(--navbar-offset));
   display: none;
   width: 14px;
   height: 14px;
