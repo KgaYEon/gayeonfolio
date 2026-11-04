@@ -1,0 +1,69 @@
+/* 패널은 넓은 화면에서만 보여준다 */
+.design-panels { display: none; }
+
+@media (min-width: 1280px) {
+  .design-panels { display: block; }
+}
+
+.panel {
+  position: absolute;
+  top: 12px;
+  width: 184px;
+  padding: 14px;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  background: var(--color-panel);
+  animation: fade 0.2s ease-out both;
+}
+
+.panel--left { left: 12px; }
+.panel--right { right: 12px; }
+
+.panel__title {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.panel__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 28px;
+  font-size: 13px;
+}
+
+.panel__row--child { padding-left: 16px; }
+
+.panel__row--selected {
+  margin: 2px -6px;
+  padding: 0 6px 0 22px;
+  border-radius: 6px;
+  background: var(--color-orange);
+  color: #000;
+}
+
+.panel__label,
+.panel__type { color: var(--color-muted); }
+
+.panel__row--selected .panel__type { color: #000; }
+
+.panel__divider {
+  height: 1px;
+  margin: 8px 0;
+  background: var(--color-line);
+}
+
+.panel__color {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.panel__swatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #62626a;
+  border-radius: 3px;
+}

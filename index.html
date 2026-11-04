@@ -8,68 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/styles/index.css">
 </head>
 <body>
-  <main class="hero" data-step="0">
-    <div class="grid" aria-hidden="true"></div>
-
-    <aside class="panel panel-left" aria-label="Layers">
-      <p class="panel-title">Layers</p>
-      <div class="row"><span>Home</span><span class="muted">Frame</span></div>
-      <div class="row row-selected"><span>Headline</span><span>Text</span></div>
-      <div class="row row-child"><span>Switch key</span><span class="muted">Button</span></div>
-      <div class="row row-child"><span>Logo</span><span class="muted">Text</span></div>
-    </aside>
-
-    <aside class="panel panel-right" aria-label="Design properties">
-      <p class="panel-title">Design</p>
-      <div class="row"><span class="muted">Font</span><span>Outfit</span></div>
-      <div class="row"><span class="muted">Weight</span><span>500 Medium</span></div>
-      <div class="row"><span class="muted">Size</span><span id="font-size"></span></div>
-      <div class="row"><span class="muted">Line height</span><span>104%</span></div>
-      <div class="row"><span class="muted">Letter spacing</span><span>-2%</span></div>
-      <div class="divider"></div>
-      <div class="row"><span class="muted">Text</span><span class="swatch-value"><span class="swatch" style="background:#f5f5f5"></span>F5F5F5</span></div>
-      <div class="row"><span class="muted">Key</span><span class="swatch-value"><span class="swatch" style="background:#ff7a1a"></span>FF7A1A</span></div>
-      <div class="row"><span class="muted">Ground</span><span class="swatch-value"><span class="swatch swatch-outline" style="background:#0b0b0c"></span>0B0B0C</span></div>
-    </aside>
-
-    <div class="stage">
-      <h1 class="headline" id="headline">
-        <span>Designed in your</span>
-        <span>language</span>
-      </h1>
-
-      <div class="selection" aria-hidden="true">
-        <span class="handle handle-tl"></span>
-        <span class="handle handle-tr"></span>
-        <span class="handle handle-bl"></span>
-        <span class="handle handle-br"></span>
-        <span class="selection-font">Outfit Medium</span>
-        <span class="selection-size" id="box-size"></span>
-      </div>
-
-      <section class="terminal" aria-label="Code view">
-        <div class="terminal-bar">
-          <span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="terminal-title">gayeon@portfolio</span>
-        </div>
-        <pre class="terminal-code" id="terminal-code"></pre>
-      </section>
-
-      <button class="key" id="switch-key" type="button" aria-label="Switch key, default view">
-        <span class="key-face"><span class="key-label">Switch</span></span>
-      </button>
-
-      <div class="cursor" aria-hidden="true">
-        <svg width="22" height="24" viewBox="0 0 22 24"><path d="M2 2l7 19 3.2-8L20 10z"></path></svg>
-        <span>Gayeon</span>
-      </div>
-    </div>
-
-    <p class="logo">Gayeonfolio 2026</p>
-  </main>
-  <script src="main.js"></script>
+  <div id="root"></div>
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>

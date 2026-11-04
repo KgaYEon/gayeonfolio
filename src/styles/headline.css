@@ -1,0 +1,13 @@
+.headline {
+  margin: 0;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  white-space: nowrap;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.headline--hidden { visibility: hidden; }
+
+.headline__line { display: block; }

@@ -1,0 +1,33 @@
+.cursor {
+  position: absolute;
+  right: -0.34em;
+  top: 2.2em;
+  pointer-events: none;
+  animation: cursor-glide 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.cursor__arrow { display: block; }
+
+.cursor__arrow path {
+  fill: var(--color-blue);
+  stroke: #fff;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+
+.cursor__name {
+  display: block;
+  width: fit-content;
+  margin: 2px 0 0 14px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--color-blue);
+  color: #fff;
+}
+
+@keyframes cursor-glide {
+  from { opacity: 0; transform: translate(48px, 36px); }
+  to { opacity: 1; transform: none; }
+}
