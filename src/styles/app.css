@@ -1,0 +1,41 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+/* 홈 화면이 한 점으로 줄어든다 */
+.app[data-stage="collapsing"] .hero {
+  animation: hero-collapse 0.56s cubic-bezier(0.7, 0, 0.84, 0) both;
+}
+
+.app[data-stage="expanding"] .hero {
+  animation: hero-expand 0.52s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.app__dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: none;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  box-shadow: 0 0 24px rgba(255, 122, 26, 0.7);
+}
+
+.app[data-stage="dot"] .app__dot { display: block; }
+
+@keyframes hero-collapse {
+  from { transform: scale(1); opacity: 1; border-radius: 0; }
+  85% { opacity: 1; }
+  to { transform: scale(0); opacity: 0; border-radius: 50%; }
+}
+
+@keyframes hero-expand {
+  from { transform: scale(0); opacity: 0; border-radius: 50%; }
+  to { transform: scale(1); opacity: 1; border-radius: 0; }
+}

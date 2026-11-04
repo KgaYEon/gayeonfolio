@@ -26,6 +26,16 @@
   letter-spacing: -0.01em;
 }
 
+.hero__hint {
+  position: absolute;
+  right: clamp(16px, 5.5vw, 80px);
+  bottom: calc(40px + env(safe-area-inset-bottom));
+  margin: 0;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
 .hero__grid {
   position: absolute;
   inset: 0;
@@ -48,4 +58,5 @@
   .hero { padding: 24px 16px 64px; }
   .hero__stage { font-size: min(9.5vw, 19vh); }
   .hero__logo { bottom: calc(16px + env(safe-area-inset-bottom)); font-size: 16px; }
+  .hero__hint { bottom: calc(16px + env(safe-area-inset-bottom)); }
 }

@@ -1,3 +1,3 @@
-import { Hero } from "./components/Hero.js";
+import { App } from "./components/App.js";
 
-document.getElementById("root").append(Hero());
+document.getElementById("root").append(App());

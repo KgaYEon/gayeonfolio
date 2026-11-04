@@ -1,5 +1,12 @@
 export const HEADLINE_LINES = ["Designed in your", "language"];
 export const LOGO_TEXT = "Gayeonfolio 2026";
+export const SCROLL_HINT = "Scroll";
+
+export const HOME_TAB = "home.html";
+export const ABOUT_TAB = "about_me.mp4";
+export const ABOUT_VIDEO_LABEL = "About me video";
+// 영상 파일을 넣고 경로를 적으면 영상이 자리 표시 대신 나타난다. 예: "videos/about-me.mp4"
+export const ABOUT_VIDEO_SRC = "";
 export const KEY_LABEL = "Switch";
 export const CURSOR_NAME = "Gayeon";
 export const TERMINAL_TITLE = "gayeon@portfolio";

@@ -15,6 +15,8 @@ python3 -m http.server
 - `src/lib`: helpers that do not depend on a component
 - `src/styles`: shared tokens and one stylesheet per component
 
+To add the About me video, put the file in the project and set its path in `ABOUT_VIDEO_SRC` in `src/data/content.js`.
+
 ## Moving to React
 
 - `Hero.js` holds the view state, which becomes `useState`.
